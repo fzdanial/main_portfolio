@@ -1,4 +1,7 @@
-This is a dashboard app i created to show the data. 
+This is my portfolio website. 
 
-This is my initial react project, and is still in progress. 
-This is based on the idea and referenced from : https://www.youtube.com/watch?v=wYpCWwD1oz0&list=PLofcLqnungHyZ7ett8t3t5mzpumPGbRPA&ab_channel=EdRoh
+This site is meant to showcase all my projects and learnings so far. 
+This site will be hosted with the following link:
+/* ADD LINK HERE */
+
+Thank you for visiting!
