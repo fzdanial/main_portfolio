@@ -3,6 +3,7 @@ import { tokens } from "../../theme";
 import Header from "../../components/Header";
 // import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
+import Team from "../../scenes/team";
 
 const About = () => {
     const theme = useTheme();
@@ -42,7 +43,24 @@ const About = () => {
                     and harness their true potential.
                 </Typography>
             </Box>
+            
+            {/* Previous Projects */}
+            <Box m="20px">
+                <Header title="Previous Projects"  subtitle="Notable personal projects"/>
+            </Box>
+
+            {/* Skills */}
+            <Box m="20px">
+                <Header title="Skills" subtitle="Experienced Tech Stacks"/>
+            </Box>
+
+            {/* Skills */}
+            <Box m="20px">
+                <Header title="Contact Me" subtitle="Get in touch"/>
+            </Box>
         </Box>
+
+        
 
     );
     

@@ -5,17 +5,14 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
-import PieChartOutlinedIcon from "@mui/icons-material/PieChartOutlined";
-import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
+import MemoryOutlinedIcon from '@mui/icons-material/MemoryOutlined';
+import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 const Item = ({ title, to, icon, selected, setSelected}) => {
     const theme = useTheme();
@@ -33,11 +30,29 @@ const Item = ({ title, to, icon, selected, setSelected}) => {
     )
 }
 
+const PageLink = ({title, icon, to}) => {
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+    return (
+        <MenuItem 
+            style={{ color: colors.grey[100]}} 
+            icon={icon}
+        >
+            <Typography>{title}</Typography>
+            <Link 
+                to={to}
+                target="_blank" 
+                rel="noopener noreferrer"      
+            />
+        </MenuItem>
+    )
+}
+
 const Sidebar = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    const [isCollapsed, setIsCollapsed] = useState(false);
-    const [selected, setSelected] = useState("Dashboard");
+    const [isCollapsed, setIsCollapsed] = useState(true);
+    const [selected, setSelected] = useState("About");
 
     return (
         <Box
@@ -46,7 +61,7 @@ const Sidebar = () => {
                 background: `${colors.primary[400]} !important`,
                 },
                 "& .pro-icon-wrapper": {
-                    backgroundColor: `transaparent !important`
+                    backgroundColor: `transparent !important`
                 },
                 "& .pro-inner-item": {
                     padding: `5px 35px 5px 20px !important`
@@ -73,15 +88,13 @@ const Sidebar = () => {
                         {!isCollapsed && (
                             <Box
                                 display="flex"
-                                justifyContent="space-between"
+                                justifyContent="center"
                                 alignItems="center"
                                 ml="15px"
+                                
                             > 
-                                <Typography variant="h3" color={colors.grey[100]}> 
-                                    ADMIN
-                                </Typography>
                                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                                    <MenuOutlinedIcon />
+                                    <MenuOutlinedIcon/>
                                 </IconButton>
                             </Box>
                         )}
@@ -107,10 +120,14 @@ const Sidebar = () => {
                                     fontWeight="bold" 
                                     sx={{m: "10px 0 0 0"}}
                                 >
-                                    Marky Mark
+                                    Danial Zulkifli
                                 </Typography>
-                                <Typography variant ="h5" color = {colors.greenAccent[500]}>
-                                    Founder
+                                <Typography variant ="h5" color = {colors.greenAccent[400]}>
+                                    Data Scientist 
+                                    <br/>
+                                    & 
+                                    <br/>
+                                    Full-Stack Developer
                                 </Typography>
                             </Box>
                         </Box>
@@ -131,26 +148,19 @@ const Sidebar = () => {
                             color = {colors.grey[300]}
                             sx = {{m: "15px 0 5px 20px"}}
                         >
-                            Data
+                            My Work
                         </Typography>
                         <Item
-                            title="Manage Team"
+                            title="Projects"
                             to="/team"
-                            icon={<PeopleOutlinedIcon />}
+                            icon={<CodeOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item
-                            title="Contacts Information"
+                            title="Skills"
                             to="/contacts"
-                            icon={<ContactsOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item
-                            title="Invoices Balances"
-                            to="/invoices"
-                            icon={<ReceiptOutlinedIcon />}
+                            icon={<MemoryOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
@@ -160,28 +170,22 @@ const Sidebar = () => {
                             color = {colors.grey[300]}
                             sx = {{m: "15px 0 5px 20px"}}
                         >
-                            Pages
+                            My Links
                         </Typography>
-                        <Item
-                            title="Profile Form"
-                            to="/form"
-                            icon={<PersonOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
+                        <PageLink 
+                            title="CV"
+                            to="https://drive.google.com/file/d/1bRiik0fCp7K1Up7XE1KBSEsEGQkFixEu/view?usp=sharing"
+                            icon={<ContactPageOutlinedIcon />}
                         />
-                        <Item
-                            title="Calendar"
-                            to="/calendar"
-                            icon={<CalendarTodayOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
+                        <PageLink
+                            title="LinkedIn"
+                            to="https://www.linkedin.com/in/fzdanial/"
+                            icon={<LinkedInIcon />}
                         />
-                        <Item
-                            title="FAQ"
-                            to="/faq"
-                            icon={<HelpOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
+                        <PageLink
+                            title="GitHub"
+                            to="https://github.com/fzdanial"
+                            icon={<GitHubIcon />}
                         />
 
                         <Typography
@@ -189,33 +193,12 @@ const Sidebar = () => {
                             color = {colors.grey[300]}
                             sx = {{m: "15px 0 5px 20px"}}
                         >
-                            Charts
+                            Contact
                         </Typography>
                         <Item
-                            title="Bar Chart"
+                            title="Email Me"
                             to="/bar"
-                            icon={<BarChartOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item
-                            title="Pie Chart"
-                            to="/pie"
-                            icon={<PieChartOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item
-                            title="Line Chart"
-                            to="/line"
-                            icon={<TimelineOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item
-                            title="Geography"
-                            to="/geography"
-                            icon={<MapOutlinedIcon />}
+                            icon={<EmailOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
