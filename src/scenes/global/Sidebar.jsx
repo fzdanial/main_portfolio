@@ -152,14 +152,14 @@ const Sidebar = () => {
                         </Typography>
                         <Item
                             title="Projects"
-                            to="/team"
+                            to="/project"
                             icon={<CodeOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item
                             title="Skills"
-                            to="/contacts"
+                            to="/skill"
                             icon={<MemoryOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}

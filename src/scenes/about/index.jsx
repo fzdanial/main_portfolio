@@ -3,7 +3,7 @@ import { tokens } from "../../theme";
 import Header from "../../components/Header";
 // import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import Team from "../../scenes/team";
+import Team from "../project";
 
 const About = () => {
     const theme = useTheme();

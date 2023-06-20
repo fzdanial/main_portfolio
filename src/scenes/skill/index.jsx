@@ -5,7 +5,7 @@ import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 
-const Contacts = () => {
+const Skills = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
@@ -16,4 +16,4 @@ const Contacts = () => {
     );
 };
 
-export default Contacts;
+export default Skills;
