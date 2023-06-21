@@ -3,7 +3,7 @@ import { tokens } from "../../theme";
 import Header from "../../components/Header";
 // import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import Team from "../project";
+import { Link } from "react-router-dom";
 
 const About = () => {
     const theme = useTheme();
@@ -47,16 +47,75 @@ const About = () => {
             {/* Previous Projects */}
             <Box m="20px">
                 <Header title="Previous Projects"  subtitle="Notable personal projects"/>
+                <Box display="flex" mt="20px">
+                    <Button
+                        href="/project"
+                        sx={{
+                            backgroundColor: colors.blueAccent[700],
+                            color: colors.greenAccent[100],
+                            fontSize: "14px",
+                            fontWeight: "bold",
+                            padding: "10px 20px",
+                        }}
+                    > 
+                    See Projects Here
+                    </Button>
+                </Box>
             </Box>
 
             {/* Skills */}
             <Box m="20px">
                 <Header title="Skills" subtitle="Experienced Tech Stacks"/>
+                <Box display="flex" mt="20px">
+                    <Button
+                        href="/skill"
+                        sx={{
+                            backgroundColor: colors.blueAccent[700],
+                            color: colors.greenAccent[100],
+                            fontSize: "14px",
+                            fontWeight: "bold",
+                            padding: "10px 20px",
+                        }}
+                    > 
+                    See Skills Here
+                    </Button>
+                </Box>
             </Box>
 
-            {/* Skills */}
+            {/* Contact Me */}
             <Box m="20px">
                 <Header title="Contact Me" subtitle="Get in touch"/>
+                <Box display="flex" alignItems="left" >
+                    <Button
+                        href="https://www.linkedin.com/in/fzdanial/"
+                        sx={{
+                            backgroundColor: colors.blueAccent[700],
+                            color: colors.greenAccent[100],
+                            fontSize: "14px",
+                            fontWeight: "bold",
+                            padding: "10px 20px"
+                        }}
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                    > 
+                    LinkedIn
+                    </Button>
+                    <Button sx={{padding: "5px"}}></Button>
+                    <Button
+                        href="https://github.com/fzdanial"
+                        sx={{
+                            backgroundColor: colors.blueAccent[700],
+                            color: colors.greenAccent[100],
+                            fontSize: "14px",
+                            fontWeight: "bold",
+                            padding: "10px 20px",
+                        }}
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                    > 
+                    GitHub
+                    </Button>
+                </Box>
             </Box>
         </Box>
 

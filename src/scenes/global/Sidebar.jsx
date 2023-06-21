@@ -188,20 +188,20 @@ const Sidebar = () => {
                             icon={<GitHubIcon />}
                         />
 
-                        <Typography
+                        {/* <Typography
                             variant="h6"
                             color = {colors.grey[300]}
                             sx = {{m: "15px 0 5px 20px"}}
                         >
                             Contact
-                        </Typography>
-                        <Item
+                        </Typography> */}
+                        {/* <Item
                             title="Email Me"
                             to="/bar"
                             icon={<EmailOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
-                        />
+                        /> */}
                     </Box>
                 </Menu>
             </ProSidebar>
