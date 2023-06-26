@@ -174,7 +174,7 @@ const Sidebar = () => {
                         </Typography>
                         <PageLink 
                             title="CV"
-                            to="https://drive.google.com/file/d/1bRiik0fCp7K1Up7XE1KBSEsEGQkFixEu/view?usp=sharing"
+                            to="https://drive.google.com/file/d/1WPKUu0DPsmI-CCym1wS3gWL9qBjb4IKq/view?usp=sharing"
                             icon={<ContactPageOutlinedIcon />}
                         />
                         <PageLink
