@@ -16,7 +16,7 @@ const About = () => {
                 <Header title="Hi, I'm Danial"  subtitle="Welcome to my page."/>
                 <Box display="flex" mt="20px">
                     <Button
-                        href="https://drive.google.com/file/d/1bRiik0fCp7K1Up7XE1KBSEsEGQkFixEu/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1WPKUu0DPsmI-CCym1wS3gWL9qBjb4IKq/view?usp=sharing"
                         sx={{
                             backgroundColor: colors.blueAccent[700],
                             color: colors.greenAccent[100],
@@ -49,7 +49,8 @@ const About = () => {
                 <Header title="Previous Projects"  subtitle="Notable personal projects"/>
                 <Box display="flex" mt="20px">
                     <Button
-                        href="/project"
+                        component={Link}
+                        to={'/project'}
                         sx={{
                             backgroundColor: colors.blueAccent[700],
                             color: colors.greenAccent[100],
@@ -68,7 +69,8 @@ const About = () => {
                 <Header title="Skills" subtitle="Experienced Tech Stacks"/>
                 <Box display="flex" mt="20px">
                     <Button
-                        href="/skill"
+                        component={Link}
+                        to="/skill"
                         sx={{
                             backgroundColor: colors.blueAccent[700],
                             color: colors.greenAccent[100],
