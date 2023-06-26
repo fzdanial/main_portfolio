@@ -15,6 +15,8 @@ import rubyIco from "../img/ruby.png";
 import tfIco from "../img/tf.png";
 import htmlIco from "../img/html.png";
 import cssIco from "../img/css.png";
+import pandasIco from "../img/pandas.png";
+import sklearnIco from "../img/sklearn.png";
 
 const Skills = () => {
     const theme = useTheme();
@@ -104,6 +106,21 @@ const Skills = () => {
                 src={tfIco}
                 style={{ width: "10%", height: "10%" }}
               />
+              <img
+                alt="sklearn"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+                src={sklearnIco}
+                style={{ width: "14%", height: "14%" }}
+              />
+              <img
+                alt="pandas"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+                src={pandasIco}
+                style={{ width: "15%", height: "15%" }}
+              />
+            </Box>
+            <br/>
+            <Box display="flex" justifyContent="center" alignItems="right">
               <img
                 alt="postgres"
                 className="absolute inset-0 w-full h-full object-cover object-center"
