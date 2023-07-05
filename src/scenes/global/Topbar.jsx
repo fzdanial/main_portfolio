@@ -1,7 +1,6 @@
 import {Box, IconButton, useTheme } from "@mui/material"
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
-import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -42,7 +41,7 @@ const Topbar = () => {
             <IconButton 
                 type ="button" 
                 sx= {{ p:1 }}
-                href="https://drive.google.com/file/d/1WPKUu0DPsmI-CCym1wS3gWL9qBjb4IKq/view?usp=sharing"
+                href="https://drive.google.com/file/d/1T3MOjUy1_3FJEwWNNvH1RzHFanZdRdA1/view?usp=sharing"
                 target="_blank" 
                 rel="noopener noreferrer" 
             >
@@ -60,9 +59,9 @@ const Topbar = () => {
         {/* ICONS */}
         <Box display="flex">
             {/* Later add a contact me icon link */}
-            <IconButton>
+            {/* <IconButton>
                 <EmailOutlinedIcon/>
-            </IconButton>
+            </IconButton> */}
 
             {/* Dark theme button */}
             <IconButton onClick={colorMode.toggleColorMode}>
